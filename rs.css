@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+ "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .header {
@@ -302,8 +303,7 @@ svg {
 @media only screen and (max-width: 400px) {
   #about {
     background-color: #e85d04;
-    min-height: 80vh;
-    max-height: 120vh;
+    height: 140vh;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
