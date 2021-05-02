@@ -2,11 +2,12 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .header {
@@ -135,9 +136,10 @@ img {
 
 #about {
   background-color: #e85d04;
-  height: 70vh;
-  width: 100%;
-  padding-top: 16vh;
+  /* height: 70vh;
+  width: 100%; */
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
 .content_about {
@@ -164,11 +166,11 @@ span {
   margin-bottom: 20px;
   padding-bottom: 20px;
   -webkit-box-shadow: 10px 20px 30px;
-          box-shadow: 10px 20px 30px;
+  box-shadow: 10px 20px 30px;
   -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-name: form;
-          animation-name: form;
+  animation-name: form;
 }
 
 form {
@@ -267,9 +269,9 @@ svg {
   }
   ul {
     -webkit-animation-name: come;
-            animation-name: come;
+    animation-name: come;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     background-color: black;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -300,14 +302,13 @@ svg {
 }
 
 @media only screen and (max-width: 400px) {
-  #about {
+  /* #about {
     background-color: #e85d04;
-    min-height: 80vh;
-    max-height: 120vh;
+    height: 180vh;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
-  }
+  } */
   .content_form {
     width: 100%;
   }
