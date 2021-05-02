@@ -6,8 +6,7 @@
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
 }
 
 .header {
@@ -302,15 +301,7 @@ svg {
 }
 
 @media only screen and (max-width: 400px) {
-  /* #about {
-    background-color: #e85d04;
-    height: 180vh;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  } */
   .content_form {
     width: 100%;
   }
 }
-/*# sourceMappingURL=rs.css.map */
