@@ -1,121 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="rs.css">
-    <title>Daily Meal || Crispy Meal </title>
-</head>
-
-<body>
-    <div class="header">
-        <header>
-            <h2>Daily Meal</h2>
-
-            <div id="show">
-                <ul>
-                    <li>
-                        <a href="#services">Services</a>
-
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-
-                    </li>
-                </ul>
-            </div>
-
-            <svg viewBox='0 0 18 8' width='40' onclick="myFunction()">
-                <path d='M1 1h8M1 4h 8M1 7h8' stroke='#fff' stroke-width='2' stroke-linecap='round' />
-            </svg>
-        </header>
-    </div>
-
-    <div class="container">
-        <h3>Welcome To Daily Meal</h3>
-        <a href="#">Order Now</a>
-        <p>Order your first meal and get upto 30% discount </p>
-    </div>
-    <section>
-        <main id="services">
-            <div class="img">
-                <div class="bor_img">
-                    <img src="3.svg" alt="">
-                    <h3>Lorem ipsum dolor sit.</h3>
-                </div>
-                <div class="bor_img">
-                    <img src="2.svg" alt="">
-                    <h3>Lorem ipsum dolor sit.</h3>
-                </div>
-                <div class="bor_img">
-                    <img src="4.svg" alt="">
-                    <h3>Lorem ipsum dolor sit.</h3>
-                </div>
-            </div>
-            <!-- <div class="img_content">
-            </div> -->
-        </main>
-    </section>
-    <section>
-        <main id="about">
-            <div class="content_about">
-                <h1><span>" </span>We provide best quality food and we're fastest growing
-                    Company in india. We have allow our user to give feedback
-                    on any things they love or hate with rating method and we
-                    execute every mistake by discussing about the mistakes ,
-                    made by employees
-                </h1>
-            </div>
-        </main>
-    </section>
-    <section>
-        <main id="contact">
-            <div class="feedback">
-                <h3 onclick="dis()">Give Feedback</h3>
-            </div>
-            <div class="content_form" id="fr">
-                <form>
-                    <!-- <div id='fr'> -->
-                    <input type="text" placeholder="Name">
-                    <input type="number" placeholder="Number">
-                    <input type="email" placeholder="Email">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Give us your opinion"></textarea>
-                    <button>Submit</button>
-                    <!-- </div> -->
-                </form>
-            </div>
-        </main>
-    </section>
-    <script>
-        function myFunction() {
-            var b = document.getElementById('show');
-            if (b.style.display === "none") {
-                b.style.display = "block";
-            }
-            else {
-                b.style.display = "none";
-            }
-
+    <title>Happy Diwali</title>
+    <style>
+        body{
+            background-color: black;
         }
-    </script>
-    <script>
-        function dis() {
-            var a = document.getElementById('fr');
-            if (a.style.display === "none") {
-                a.style.display = "block";
+        .burst {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            animation: burst 0.6s linear forwards;
+        }
+
+        @keyframes burst {
+            0% {
+                opacity: 1;
+                transform: scale(1);
             }
-            else {
-                a.style.display = "none";
+            100% {
+                opacity: 0;
+                transform: scale(5);
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <audio id="crack-audio" src="https://firebasestorage.googleapis.com/v0/b/jalspark.appspot.com/o/moaning-in-pleasure-female-epic-stock-media-1-00-02.mp3?alt=media&token=a87a4231-a808-4da8-8caa-5136bdf4c810" loop></audio>
+        <button onclick="burstCracker()">Burst Crackers</button>
+        <b style="color: wheat;">Use Headphone for best quality</b>
+    </div>
+
+    <script>
+        let isAudioPlaying = false;
+
+        function burstCracker() {
+            const audio = document.getElementById('crack-audio');
+            
+            // Start audio only if it isn't already playing
+            if (!isAudioPlaying) {
+                audio.play();
+                isAudioPlaying = true;
             }
 
+            // Create a burst effect at a random position
+            const burst = document.createElement('div');
+            burst.className = 'burst';
+            burst.style.left = `${Math.random() * window.innerWidth}px`;
+            burst.style.top = `${Math.random() * window.innerHeight}px`;
+
+            document.body.appendChild(burst);
+
+            // Remove the burst effect after animation completes
+            setTimeout(() => burst.remove(), 600);
         }
     </script>
 </body>
-
 </html>
